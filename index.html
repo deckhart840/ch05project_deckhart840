@@ -1,0 +1,84 @@
+<!--
+  Name: Drew (deckhart840)
+  Date: 03/02/2026
+  File: index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="scripts/form-validation.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Home</h1>
+  </header>
+
+  <nav aria-label="Primary">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Contact Form</h2>
+
+    <form id="contact-form" action="#" method="post" novalidate>
+      <div class="field">
+        <label for="full-name">Full Name</label>
+        <input
+          class="required"
+          type="text"
+          id="full-name"
+          name="full-name"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          class="required"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="topic">Topic</label>
+        <select class="required" id="topic" name="topic" required>
+          <option value="">-- Select one --</option>
+          <option value="question">Question</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <!-- requirement: input type="button" (not <button>) -->
+      <input type="button" id="submit-btn" value="Submit" />
+    </form>
+
+    <span id="missing-count"></span>
+
+    <!-- Paragraph-tag "comments" describing the JS functions (assignment requirement) -->
+    <section class="js-notes" aria-label="JavaScript Notes">
+      <p><strong>checkMissing()</strong> counts how many required fields are empty and updates the missing-count message.</p>
+      <p><strong>validateEmail()</strong> checks that the email input is at least 8 characters and applies/removes an invalid style.</p>
+      <p><strong>runValidation()</strong> runs both checks and blocks submission (with an alert) if anything is incomplete/invalid.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026</p>
+  </footer>
+</body>
+</html>
